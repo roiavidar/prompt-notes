@@ -1,14 +1,14 @@
-## Testim.io Test Generation
+## Example: E2E Test Generation (adapt to your tool)
 
-> **Note:** This workflow is specific to Testim.io E2E testing tool. Adapt the patterns for your E2E testing framework (Playwright, Cypress, Selenium, etc.).
+> **Note:** This is an example workflow pattern for E2E test generation. Adapt the JSON structure and workflow to match your E2E testing framework (Playwright, Cypress, Selenium, WebdriverIO, etc.).
 
-Generate Testim.io test specs from QA manual tests or feature descriptions.
+Generate E2E test specs from QA manual tests or feature descriptions.
 
 ## Input Sources
 
-1. **Explicit path**: `@testim ${PLAN_PATH}`
-2. **Current PLAN.md**: `@testim` (uses `${PLAN_PATH}` if exists)
-3. **Specific flow**: `@testim login flow`
+1. **Explicit path**: `@e2e ${PLAN_PATH}`
+2. **Current PLAN.md**: `@e2e` (uses `${PLAN_PATH}` if exists)
+3. **Specific flow**: `@e2e login flow`
 4. **Inline steps**: User provides test list
 
 ## Test Extraction
@@ -56,13 +56,13 @@ Generate Testim.io test specs from QA manual tests or feature descriptions.
 
 ## Output
 
-**Save to**: `.github/testim/` folder  
+**Save to**: `${E2E_DIR}/` folder  
 **Naming**: `kebab-case-description.json`  
 **Create**: README.md index of all tests
 
 **README.md format**:
 ```markdown
-# Testim.io Test Specifications
+# E2E Test Specifications
 
 ## Available Tests
 ### Test Name
@@ -72,8 +72,8 @@ Generate Testim.io test specs from QA manual tests or feature descriptions.
 **Steps**: 8
 
 ## Importing
-1. Testim.io → Tests → Import → JSON
-2. Select file from `.github/testim/`
+1. Import into your E2E testing tool
+2. Select file from `${E2E_DIR}/`
 3. Review selectors, run test
 ```
 
@@ -82,7 +82,7 @@ Generate Testim.io test specs from QA manual tests or feature descriptions.
 1. Identify source (file path or PLAN.md QA section)
 2. Extract 3-5 critical flows
 3. Generate JSON per flow with proper selectors
-4. Create `.github/testim/` folder + README.md
+4. Create `${E2E_DIR}/` folder + README.md
 5. Present summary with next steps
 
 ## Quality Checklist

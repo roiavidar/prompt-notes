@@ -4,10 +4,10 @@
 
 ```bash
 # ALWAYS run this BEFORE creating new diagram
-rm .github/DIAGRAM.md
+rm `${DIAGRAM_PATH}`
 ```
 
-Then create new diagram at: `.github/DIAGRAM.md`
+Then create new diagram at: `${DIAGRAM_PATH}`
 
 **Guidelines Reference**:
 - **Deep Thinking**: `${PROMPTS_DIR}/guidelines/deep-thinking-guidelines.md` - Pattern discovery for multi-pass analysis
@@ -180,7 +180,7 @@ stateDiagram-v2
 
 **After Creation, Report**:
 ```
-✅ Diagram created in `.github/DIAGRAM.md`
+✅ Diagram created in `${DIAGRAM_PATH}`
 ✅ All Mermaid diagrams verified and rendering correctly
 📊 [X] files across [Y] passes
 🎯 [Z] components documented

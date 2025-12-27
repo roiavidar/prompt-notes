@@ -6,15 +6,15 @@ How to adapt this framework to your tech stack.
 
 1. **Copy the framework**
    ```bash
-   cp -r prompt-notes/framework/ your-project/.ai-prompts/
+   cp -r .github/prompt-notes/framework/ your-project/.github/prompt-notes/
    ```
 
 2. **Update `project.config.md`** with your paths and stack:
    ```markdown
    ## Paths
    - SRC_DIR: src
-   - PROMPTS_DIR: .ai-prompts
-   - COMMON_DIR: src/shared
+   - PROMPTS_DIR: .github/prompt-notes
+   - COMMON_DIR: src/common
    
    ## Stack
    - FRONTEND: Vue 3 + TypeScript
@@ -106,11 +106,3 @@ Don't customize everything at once:
 4. Gradually customize more files as needed
 
 The goal is having the AI follow your project's existing conventions, not creating new ones.
-
-#### Test Structure
-
-**Jest + RTL (example):**
-```ts
-import { customRender, screen } from 'src/test-utils'
-
-const { user } = customRender(<UserProfile />, {

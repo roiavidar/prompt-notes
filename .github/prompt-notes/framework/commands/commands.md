@@ -1,4 +1,4 @@
-## Commands (Opinionated)
+## Commands
 
 **CRITICAL**: Follow ALL instructions and guideline files precisely.  
 **ALWAYS LOAD**: `${PROMPTS_DIR}/guidelines/code-style-guidelines.md` before code changes.
@@ -7,7 +7,7 @@
 - `@plan` — Planning mode (loads `instructions/workflows/plan-instructions.md`)
 - `@build` — Implementation + verification only (loads `instructions/workflows/build-instructions.md`)
 - `@test` — Test maintenance based on git changes (loads `instructions/workflows/test-instructions.md`)
-- `@testim` — Generate Testim.io JSON specs (loads `instructions/workflows/testim-instructions.md`)
+- `@e2e` — Generate E2E test specs (loads `instructions/workflows/e2e-instructions.md`)
 - `@ui-accurate` — Pixel-perfect UI refinement (loads `instructions/workflows/ui-accurate-instructions.md`)
 - `@stress-ui` — Stress-test mock data generation (loads `instructions/workflows/stress-ui-instructions.md`)
 - `@diagram` — Mermaid architecture diagrams (loads `instructions/workflows/diagram-instructions.md`)

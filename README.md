@@ -1,6 +1,6 @@
-# Prompt Notes
+# Prompt Notes 🎼
 
-A framework for structuring AI assistant prompts in software projects.
+Reusable, structured prompt workflows and guidelines for AI coding assistants.
 
 ## What This Is
 
@@ -27,8 +27,8 @@ This framework addresses these issues by providing:
 ### 1. Copy the Framework
 
 ```bash
-cp -r prompt-notes/framework/ your-project/.ai-prompts/
-cd your-project/.ai-prompts/
+cp -r prompt-notes/framework/ your-project/.github/prompt-notes/
+cd your-project/.github/prompt-notes/
 ```
 
 ### 2. Configure Paths and Stack
@@ -38,7 +38,7 @@ Edit `project.config.md` with your project's details:
 ```markdown
 ## Paths
 - SRC_DIR: src
-- PROMPTS_DIR: .ai-prompts
+- PROMPTS_DIR: .github/prompt-notes
 - COMMON_DIR: src/shared
 
 ## Stack
@@ -60,7 +60,7 @@ The framework includes examples using React/TypeScript/MUI/GraphQL. Each file no
 > Stack Context: These use MUI components. Adapt to your UI library.
 ```
 
-See [docs/CUSTOMIZATION.md](docs/CUSTOMIZATION.md) for guidance on translating patterns to your stack.
+See [CUSTOMIZATION.md](.github/prompt-notes/docs/CUSTOMIZATION.md) for guidance on translating patterns to your stack.
 
 ### 4. Use the Workflows
 
@@ -91,74 +91,60 @@ framework/
 │   ├── stress-ui-instructions.md        # Comprehensive testing
 │   ├── initiative-instructions.md       # Find improvements
 │   ├── extract-concerns-instructions.md # Refactoring
-│   └── testim-instructions.md           # E2E tests (optional)
+│   └── e2e-instructions.md              # E2E test generation (example)
 ├── utilities/              # Meta-tools
 │   ├── deep-think-instructions.md       # Deep analysis
 │   ├── summarize-instructions.md        # Summarization
-│   ├── generate-spec-instructions.md    # Command → Spec
-│   └── generate-command-instructions.md # Spec → Command
+│   ├── generate-spec-instructions.md    # Extract reusable template from instruction
+│   └── generate-command-instructions.md # Create project-specific instruction from template
 └── commands/
     └── commands.md         # Quick reference
 ```
 
 ## How It Works
 
-### Pattern Discovery
-
-Before generating code, the AI searches your existing codebase for similar solutions in `common/`, `utils/`, and `hooks/` directories. This reduces duplication and maintains consistency.
-
-### Multiple Approaches
-
-The framework encourages generating 2-4 different solutions and scoring them based on factors like reusability, maintainability, and pattern alignment. This makes trade-offs explicit rather than accepting the first suggestion.
-
-### Structured Phases
-
-Workflows follow a consistent structure:
-1. Discovery - Find existing patterns
-2. Design - Explore alternatives
-3. Plan - Create detailed steps
-4. Build - Implement with checks
-5. Test - Cover critical functionality
-6. Verify - Confirm it works
-
-### Quality Checks
-
-Each phase includes verification steps to catch issues early. For example, after planning, you check that all steps are actionable and all files are listed.
-
-### Self-Improvement
-
-The framework includes tools to create new workflows and commands as you discover patterns specific to your project.
-
-## Example: Planning a Feature
+Example workflow:
 
 ```bash
 @plan Add real-time notifications to dashboard
 ```
 
-This workflow:
-1. Loads relevant guideline files
-2. Searches for existing notification or real-time patterns
-3. Generates 2-4 implementation approaches
-4. Scores each approach
-5. Creates a detailed PLAN.md file with steps and checklists
+The framework:
+1. Searches your codebase for existing notification/real-time patterns (`common/`, `utils/`, `hooks/`)
+2. Generates 2-4 implementation approaches
+3. Scores each based on reusability, maintainability, and pattern alignment
+4. Creates a detailed PLAN.md with actionable steps and verification checklist
+5. Waits for your confirmation before building
+
+Then `@build` implements the plan with checks at each step, and `@test` generates tests for critical functionality.
+
+## Creating Custom Workflows
+
+As you discover patterns specific to your project, you can create new instructions:
+
+1. **Extract a template**: `@generate-spec build-instructions.md` creates a reusable spec
+2. **Reuse elsewhere**: Copy the spec to another project
+3. **Generate instruction**: `@generate-command build-instructions-spec.md` fills in project details
+
+This lets you capture and share workflows that work for your team.
 
 ## Stack Support
 
 The framework works with any stack but requires customization:
 
-**Languages**: JavaScript, TypeScript, Python, Go, Java, etc.  
-**Frameworks**: React, Vue, Angular, Django, Rails, etc.  
-**UI Libraries**: MUI, Tailwind, Vuetify, Bootstrap, etc.  
-**Data Layers**: GraphQL, REST, tRPC, etc.  
-**Testing**: Jest, Vitest, Pytest, JUnit, etc.
-
 You'll need to adapt import patterns, styling approaches, testing setup, and error handling to match your project.
 
 ## Documentation
 
-- [PHILOSOPHY.md](PHILOSOPHY.md) - Background and approach
-- [docs/CUSTOMIZATION.md](docs/CUSTOMIZATION.md) - Adapting to your stack
-- [docs/VARIABLES.md](docs/VARIABLES.md) - Configuration reference
+- [PHILOSOPHY.md](.github/prompt-notes/docs/PHILOSOPHY.md) - Background and approach
+- [ARCHITECTURE.md](.github/prompt-notes/docs/ARCHITECTURE.md) - Visual framework overview
+- [CUSTOMIZATION.md](.github/prompt-notes/docs/CUSTOMIZATION.md) - Adapting to your stack
+- [VARIABLES.md](.github/prompt-notes/docs/VARIABLES.md) - Configuration reference
+
+## Background
+
+This repository is based on ideas described in the following article:
+[From Chatting with AI to Architecting It](https://dev.to/roi_d95df0bf6e689c571b39a/from-chatting-with-ai-to-architecting-it-5a9k)
 
 ## License
 

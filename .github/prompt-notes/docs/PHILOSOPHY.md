@@ -111,11 +111,6 @@ This framework works well for:
 - Projects with established patterns
 - Teams wanting consistent AI output quality
 
-It's probably overkill for:
-- One-off scripts or experiments
-- Solo projects where you pair program everything
-- Learning a new language (too much overhead)
-
 ## What Success Looks Like
 
 You'll know it's working when:

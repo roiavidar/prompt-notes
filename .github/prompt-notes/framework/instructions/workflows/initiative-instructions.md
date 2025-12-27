@@ -6,9 +6,9 @@ Proactively find and propose improvements in the codebase (performance, architec
 
 **STOP after creating proposal.**
 
-**DO NOT write full proposals in chat.** Write all proposal details to `.github/PROPOSAL.md` file using create_file tool.
+**DO NOT write full proposals in chat.** Write all proposal details to `${PROPOSAL_PATH}` file using create_file tool.
 
-**Before starting**: `rm .github/PROPOSAL.md`
+**Before starting**: `rm ${PROPOSAL_PATH}`
 
 ---
 
@@ -19,7 +19,7 @@ Proactively find and propose improvements in the codebase (performance, architec
 **Conventions**: See `${PROMPTS_DIR}/guidelines/code-style-guidelines.md`  
 **Architecture**: See `${PROMPTS_DIR}/guidelines/architecture-guidelines.md`  
 **Testing**: See `${PROMPTS_DIR}/guidelines/testing-guidelines.md`  
-**Reusability**: Check `${COMMON_DIR}/`, `utils/`, `hooks/` before creating new  
+**Reusability**: Check `${COMMON_DIR}/`, `${UTILS_DIR}/`, `${HOOKS_DIR}/` before creating new  
 **Priorities**: Stability > Usability > Performance > Accessibility > Maintainability > DX
 
 ---
@@ -39,7 +39,7 @@ Proactively find and propose improvements in the codebase (performance, architec
    confidence: 0-100%
    ranking: impact × reusability / risk
    ```
-6. **Write `.github/PROPOSAL.md`** (see template below) — Use create_file tool to write the proposal
+6. **Write `${PROPOSAL_PATH}`** (see template below) — Use create_file tool to write the proposal
 7. **Brief Summary** — Inform user in 2-3 sentences that proposal was created
 8. **⚠️ STOP**
 

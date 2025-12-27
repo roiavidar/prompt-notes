@@ -13,11 +13,11 @@ This file defines **project-specific** values used by the prompt framework.
 Configure where the framework stores its files and references your project structure:
 
 - **SRC_DIR**: `src` — Your main source code directory
-- **PROMPTS_DIR**: `.github/prompts` — Where these prompt files live in your repo
+- **PROMPTS_DIR**: `.github/prompt-notes/framework` — Where these prompt files live in your repo
 - **PLAN_PATH**: `.github/PLAN.md` — Generated project plans
 - **DIAGRAM_PATH**: `.github/DIAGRAM.md` — Generated architecture diagrams
 - **PROPOSAL_PATH**: `.github/PROPOSAL.md` — Feature proposals
-- **TESTIM_DIR**: `.github/testim` — E2E test definitions (if using Testim or similar)
+- **E2E_DIR**: `.github/e2e` — E2E test specifications
 
 ## Codebase Layout
 

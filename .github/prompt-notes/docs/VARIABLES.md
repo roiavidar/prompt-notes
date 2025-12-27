@@ -15,10 +15,11 @@ Edit `framework/project.config.md`:
 ```markdown
 ## Paths
 - SRC_DIR: src
-- PROMPTS_DIR: .ai-prompts
-- COMMON_DIR: src/shared
+- PROMPTS_DIR: .github/prompt-notes
+- COMMON_DIR: src/common
 - UTILS_DIR: src/utils
 - HOOKS_DIR: src/hooks
+- COMMON_COMPONENTS_DIR: src/common/components
 
 ## Stack
 - FRONTEND: React + TypeScript
@@ -40,7 +41,7 @@ Default: `src`
 Example: `${SRC_DIR}/components/UserProfile.tsx`
 
 **PROMPTS_DIR** - Where this framework lives  
-Default: `.github/prompts`  
+Default: `.github/prompt-notes`  
 Example: `${PROMPTS_DIR}/guidelines/architecture.md`
 
 **COMMON_DIR** - Shared code  
@@ -84,7 +85,7 @@ Example: `GraphQL/Apollo`, `REST + Axios`, `tRPC`, `TanStack Query`
 **TYPECHECK_CMD** - Command to run type checking  
 Example: `npm run typecheck`, `yarn tsc --noEmit`
 
-**LINT_CMD** - Command to run linter  
+**LINT_CMD** - Command to run the linter  
 Example: `npm run lint`, `eslint . --fix`
 
 **TEST_CMD** - Command to run tests  
@@ -118,6 +119,3 @@ Add your own as needed:
 ```
 
 Then use them: `${PROJECT_MODULE}/theme`, `${API_BASE}/client`
-**Purpose**: Shared page templates  
-**Default**: `src/common/pages`  
-**Used in**: Architecture guidelines  

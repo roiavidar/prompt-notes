@@ -10,7 +10,7 @@ Systematic workflow for complex requests: analyze → discover patterns → expl
 ## 7-Phase Workflow
 
 1. **Analysis** - Understand: literal request, intent, core problem, constraints, success criteria
-2. **Pattern Discovery** - Search codebase FIRST (common/, utils/, hooks/) - see deep-thinking-guidelines.md
+2. **Pattern Discovery** - Search codebase FIRST (`${COMMON_DIR}/`, `${UTILS_DIR}/`, `${HOOKS_DIR}/`) - see deep-thinking-guidelines.md
 3. **Decomposition** - Break into 3-7 atomic steps with rationale
 4. **Approach Exploration** - Generate 2-4 distinct alternatives - see deep-thinking-guidelines.md
 5. **Solution Weighting** - Score using formula - see deep-thinking-guidelines.md

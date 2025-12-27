@@ -20,7 +20,7 @@ Core principles for systematic problem-solving, pattern discovery, and optimal d
 **Before proposing ANY solution:**
 
 ### Search Strategy
-1. **Semantic search**: `${COMMON_DIR}/`, `utils/`, `hooks/`, feature areas
+1. **Semantic search**: `${COMMON_DIR}/`, `${UTILS_DIR}/`, `${HOOKS_DIR}/`, feature areas
 2. **Grep search**: Function names, component patterns, imports, GraphQL ops
 3. **Pattern analysis**: How is this solved? What conventions? What utilities exist?
 
