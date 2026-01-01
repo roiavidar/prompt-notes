@@ -15,10 +15,10 @@
 ---
 
 ## Required Guidelines (load before coding)
-1. `architecture-guidelines.md` - Component patterns, state, GraphQL
-2. `ui-guidelines.md` - Spacing, components, responsive layout
-3. `code-style-guidelines.md` - Imports, naming, TypeScript patterns
-4. `error-handling-guidelines.md` - GraphQL errors, REST errors, retry logic, user feedback
+1. [`${PROMPTS_DIR}/guidelines/architecture-guidelines.md`](${PROMPTS_DIR}/guidelines/architecture-guidelines.md) - Component patterns, state, GraphQL
+2. [`${PROMPTS_DIR}/guidelines/ui-guidelines.md`](${PROMPTS_DIR}/guidelines/ui-guidelines.md) - Spacing, components, responsive layout
+3. [`${PROMPTS_DIR}/guidelines/code-style-guidelines.md`](${PROMPTS_DIR}/guidelines/code-style-guidelines.md) - Imports, naming, TypeScript patterns
+4. [`${PROMPTS_DIR}/guidelines/error-handling-guidelines.md`](${PROMPTS_DIR}/guidelines/error-handling-guidelines.md) - GraphQL errors, REST errors, retry logic, user feedback
 
 ---
 
@@ -40,7 +40,7 @@
 1. **TypeScript**: `${TYPECHECK_CMD}` (fix until clean)
 2. **Lint**: `${LINT_CMD}` (auto-fix + manual cleanup)
 3. **Manual QA**: Test states, interactions, keyboard nav, permissions
-4. **Locale** (if user-facing): Add to type.ts, en.ts, ja.ts, zh.ts
+4. **Locale** (if user-facing): Add to type.ts, en.ts
 
 ### Phase 4: Completion
 1. **Update PLAN.md** (if exists): Mark Definition of Done items
@@ -54,7 +54,7 @@
    
    Or test specific files: @test <filename>
    
-   To identify and eliminate code duplication: @extract-common
+   To identify and eliminate code duplication: @extract-concerns
    ```
 
 ---

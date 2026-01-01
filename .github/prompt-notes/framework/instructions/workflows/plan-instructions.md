@@ -139,13 +139,13 @@ Ready to implement? Run: @build
 **Red flags**: Copy-pasting, similar logic in 2+ places, similar function names
 **Action**: Extract to shared utility/component and parameterize differences
 
-**When duplication is significant**: Use `@extract-common` command to:
+**When duplication is significant**: Use `@extract-concerns` command to:
 - Analyze changed files for common patterns
 - Search project for existing similar code
 - Propose shared components/hooks/utilities
 - Reduce diff size by extracting abstractions
 
-**Example**: `@extract-common` (analyze all changed files) or `@extract-common ${SRC_DIR}/pages/feature-a/DataTable.tsx`
+**Example**: `@extract-concerns` (analyze all changed files) or `@extract-concerns ${SRC_DIR}/pages/feature-a/DataTable.tsx`
 
 ### 7. PLAN.md Template
 
@@ -187,7 +187,7 @@ Use this template when creating `${PLAN_PATH}`:
 2. [Critical step 2]
 3. [Critical step 3]
 
-**After implementation**: Consider running `@extract-common` to identify and eliminate duplication
+**After implementation**: Consider running `@extract-concerns` to identify and eliminate duplication
 
 ## Risks
 - [Breaking change 1]
@@ -253,8 +253,6 @@ Ask when:
 - [ ] Locale strings added (if user-facing):
   - [ ] `${LOCALE_DIR}/type.ts` - Type definition
   - [ ] `${LOCALE_DIR}/en.ts` - English text
-  - [ ] `${LOCALE_DIR}/ja.ts` - Japanese translation
-  - [ ] `${LOCALE_DIR}/zh.ts` - Chinese translation
 
 **If implementation fails**:
 1. Add "Post-Mortem" section to PLAN.md explaining why

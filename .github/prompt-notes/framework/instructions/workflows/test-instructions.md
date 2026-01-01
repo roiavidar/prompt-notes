@@ -3,9 +3,9 @@
 ## Objective
 Intelligent test maintenance based on git changes: add tests for new code, remove obsolete tests, avoid duplication.
 
-**Philosophy**: `testing-guidelines.md` - Test critical only, confidence over coverage.
+**Philosophy**: [`${PROMPTS_DIR}/guidelines/testing-guidelines.md`](${PROMPTS_DIR}/guidelines/testing-guidelines.md) - Test critical only, confidence over coverage.
 
-**Deep Thinking**: `deep-thinking-guidelines.md` - Pattern discovery first.
+**Deep Thinking**: [`${PROMPTS_DIR}/guidelines/deep-thinking-guidelines.md`](${PROMPTS_DIR}/guidelines/deep-thinking-guidelines.md) - Pattern discovery first.
 
 ---
 
@@ -116,8 +116,8 @@ Ask user first:
 
 ### Phase 4: Implementation
 **Load guidelines**:
-1. `testing-guidelines.md` - Setup, best practices
-2. `deep-thinking-guidelines.md` - Pattern alignment
+1. [`${PROMPTS_DIR}/guidelines/testing-guidelines.md`](${PROMPTS_DIR}/guidelines/testing-guidelines.md) - Setup, best practices
+2. [`${PROMPTS_DIR}/guidelines/deep-thinking-guidelines.md`](${PROMPTS_DIR}/guidelines/deep-thinking-guidelines.md) - Pattern alignment
 3. Similar test files
 
 **Generate tests** (testing-guidelines.md):
