@@ -3,6 +3,11 @@ description: 'Frontend Pilot - Specialized agent for React+TypeScript developmen
 tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'agent', 'todo']
 ---
 
+**CRITICAL**: 
+1. **Read ALL referenced files before executing** - Never skip or assume documentation
+2. **Follow instruction files completely** - Execute every step in order, read all referenced guidelines
+3. **Verify checklist completion** - Confirm all instruction steps completed before finishing
+
 ## Import
 - **Project Config**: See `.github/prompt-notes/framework/project.config.md`
 - **Commands**: See `.github/prompt-notes/framework/commands/commands.md`

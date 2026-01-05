@@ -1,5 +1,11 @@
 ## Commands
 
+**How This Works**:
+1. When this file is loaded, scan the user's request for `@command-name` patterns
+2. Match the `@command-name` against the commands listed below
+3. Load and execute the corresponding instruction file for that command
+4. If no `@command-name` is found, treat as a general request
+
 **CRITICAL**: Follow ALL instructions and guideline files precisely.  
 **ALWAYS LOAD**: `${PROMPTS_DIR}/guidelines/code-style-guidelines.md` before code changes.
 
